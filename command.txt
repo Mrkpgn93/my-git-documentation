@@ -6,7 +6,7 @@ git add <file-name> <file-name2>...
 
 git add .
 
-git commit -m <message>
+git commit -m "my message"
 
 git log
 
@@ -14,7 +14,8 @@ git log --oneline
 
 git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 
-git commit --amend		// posso tornare indietro soltanto di un passo! + da utilizzare SOLO dopo aver fatto "git add" 
+git commit --amend
+- Posso tornare indietro soltanto di un passo! viene comodo quando devo modificare il messaggio del commit oppure aggiungere qualcosa che mi ero dimenticato all'interno dello stage
 
 git branch
 
