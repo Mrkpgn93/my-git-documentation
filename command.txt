@@ -1,0 +1,111 @@
+git status
+
+git init
+
+git add <file-name> <file-name2>...
+
+git add .
+
+git commit -m <message>
+
+git log
+
+git log --oneline
+
+git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+
+git commit --amend		// posso tornare indietro soltanto di un passo! + da utilizzare SOLO dopo aver fatto "git add" 
+
+git branch
+
+git branch <branch-name>
+
+git switch <branch-name>
+
+git commit -a -m <message>		// "git add ." + "git commit" 
+
+git switch -c <branch-name>		// "git branch <branch-name>" + "git switch <branch-name>"
+
+git branch -d <branch-name>		// cancella un branch (da utilizzare subito dopo un git merge <branch-name>)
+
+git branch -D <branch-name>		// forza la cancellazione di un branch che è rimasto "appeso" xk non è stato mergiato 
+
+git branch -m <branch-name>
+
+git branch -M main				// rinomica il branch corrente con il nome main
+
+git merge <branch-name>
+
+git diff
+
+git diff HEAD
+
+git diff --staged  <--> git diff --cached
+
+git diff <from-branch-name> <to-branch-name>
+
+git diff <from-commit> <to-commit>
+
+git stash
+
+git stash pop
+
+git stash apply		// è come pop con la differenza che non viene rilasciata la memoria di stash
+
+git stash list
+
+git stash apply stash@{2}
+
+git stash drop stash@{2}
+
+git stash clear
+
+git checkout <hash-commit>		// torno indietro nel tempo
+
+git checkout HEAD~1		// torno indietro di 1 passo rispetto alla posizione attuale di HEAD
+
+git switch - 		// da detached HEAD torno all'ultimo commit del branch in cui mi trovo
+
+git checkout HEAD <file> [<file>]	<-->  git restore <file> [<file>]	// tutte le modifiche del file verranno eliminate 
+
+git restore --source HEAD~1 <file> [<file>]
+
+git restore --staged <file> [<file>]		// funziona nel momento in cui voglio togliere un file dalla condizione di staged (git add)
+
+cat .git/HEAD		// mi restituisce il commit dove punto
+
+git reset <hash-commit>			// torno al commit indicato e tutto quello che era stato committato prima me lo trovo in fase di unstaged
+
+git reset --hard <hash-commit>
+
+git revert <hash-commit> 		// agginge un commit che fa l'undo dei precedenti
+
+git clone <url>
+
+git remote -v
+
+git remote add <name> <url>		// aggancio un repository locale con uno creato ex-novo su GitHub
+
+git remote rename <old> <new>
+
+git remote remove <name>
+
+git push <remote> <branch>		// crea su github un branch con lo stesso nome che gli abbiamo dato in locale, le volte successive aggiornerà lo stato del repository su github
+
+git push -u <remote> <branch>	// dopo la prima volta che lo eseguiamo possiamo semplificare il comando da eseguire scrivendo soltanto "git push"
+
+git push <remote> <local-branch>:<remote-branch>		// carica su github tutte le modifiche che sono state fatte nel branch locale su un remote branch che ha un nome diverso da quello locale...
+
+git branch -r
+
+git checkout <remote>/<branch>		// torno all'ultimo commit che riguarda il progetto clonato da gitHub 
+
+git push origin main			// carico gli ultimi commit locali su gitHub
+
+git switch <nomeBranch>				// mi permette di clonare sul mio host il branch remoto di gitHub (che ha lo stesso nome)
+
+git fetch <remote>				// il comando fetch mi permette di aggiornare l'origin SENZA andare a modificare il mio workspace
+
+git fetch <remote> <branch>		// seleziono soltanto un branch di mio interesse
+
+git pull <remote> <branch>		// posso anche scrivere soltanto "git pull", "git pull" = "git fetch" + "git merge"
