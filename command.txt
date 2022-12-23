@@ -19,7 +19,7 @@ git commit --amend
 
 git branch                      // vedo l'elenco dei branch anteponendo il simbolo * su quello in cui mi trovo
 
-git branch <branch-name>        // crea un nuovo branch con il branch-name indicato 
+git branch <branch-name>        // crea un nuovo branch con il branch-name indicato a partire dall'HEAD corrente
 
 git switch <branch-name>        // sposto il puntatore HEAD in corrispondenza dell'ultimo commit del <branch-name>
 
