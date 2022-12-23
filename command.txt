@@ -38,9 +38,7 @@ git branch -d <branch-name>		// cancella un branch (da utilizzare subito dopo un
 
 git branch -D <branch-name>		// forza la cancellazione di un branch che è rimasto "appeso" xk non è stato mergiato (pericoloso...)
 
-git branch -m <branch-name>
-
-git branch -M main				// rinomina il branch corrente con il nome main
+git branch -m <branch-name>     // rinomina il branch corrente con branch-name	
 
 git merge <branch-name>
 
