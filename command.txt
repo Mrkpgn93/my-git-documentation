@@ -32,6 +32,8 @@ git commit -a -m <message>		// "git add ." + "git commit"
 
 git switch -c <branch-name>		// "git branch <branch-name>" + "git switch <branch-name>"
 
+Quando voglio cancellare un branch devo sempre farlo stando su un'altro branch!!!
+
 git branch -d <branch-name>		// cancella un branch (da utilizzare subito dopo un git merge <branch-name>)
 
 git branch -D <branch-name>		// forza la cancellazione di un branch che è rimasto "appeso" xk non è stato mergiato 
