@@ -75,7 +75,7 @@ git restore --staged <file> [<file>]		// funziona nel momento in cui voglio togl
 
 cat .git/HEAD		// mi restituisce il commit dove punto
 
-git reset <fileName>        // metto il fileName nella situazione di staged
+git reset <file-name>        // metto il fileName nella situazione di staged
 
 git reset <hash-commit>			// torno al commit indicato e tutto quello che era stato committato prima me lo trovo in fase di unstaged
 
