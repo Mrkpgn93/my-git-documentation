@@ -17,7 +17,7 @@ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(re
 git commit --amend
 - Posso tornare indietro soltanto di un passo! viene comodo quando devo modificare il messaggio del commit oppure aggiungere qualcosa che mi ero dimenticato all'interno dello stage
 
-git branch
+git branch                      // vedo l'elenco dei branch anteponendo il simbolo * su quello in cui mi trovo
 
 git branch <branch-name>
 
@@ -33,7 +33,7 @@ git branch -D <branch-name>		// forza la cancellazione di un branch che è rimas
 
 git branch -m <branch-name>
 
-git branch -M main				// rinomica il branch corrente con il nome main
+git branch -M main				// rinomina il branch corrente con il nome main
 
 git merge <branch-name>
 
