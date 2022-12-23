@@ -21,6 +21,12 @@ git branch                      // vedo l'elenco dei branch anteponendo il simbo
 
 git branch <branch-name>        // crea un nuovo branch con il branch-name indicato a partire dall'HEAD corrente
 
+Quando decido di fare switch da un branch all'altro devo sempre vedere se ho lasciato qualcosa all'interno dello stage, mi potrei trovare in 2 casi:
+1- tutto quello che ho nello stage non va in conflitto con il branch sul quale voglio switchare, se non committo prima di switchare allora mi trascino con me tutto lo stage
+2- parte dello stage va in conflitto con il branch sul quale voglio switchare, in questo caso git mi blocca e mi da solo due alternative:
+    2.1- committare tutto quello che c'è nello stage e SOLO DOPO switchare
+    2.2- stashare il materiale così da poter switchare liberamente 
+
 git switch <branch-name>        // sposto il puntatore HEAD in corrispondenza dell'ultimo commit del <branch-name>
 
 git commit -a -m <message>		// "git add ." + "git commit" 
