@@ -44,6 +44,10 @@ Esitono 3 tipi di merge:
 1- Fast Forward Merge -> avviene quando eseguo commit su uno dei due branch senza toccare l'altro
 2- Merge Commit -> avviene quando i due branch sono entrambi committati ma la loro unione non determina conflitti (git esegue il commit del merge per noi)
 3- Merge Conflicts -> avviene quando i due branch sono entrambi committati e la loro unione determina conflitti (xk ad es. modificano le stesse righe), in questo caso dobbiamo manualmente risolvere il conflitto (tramite editor) e successivamente committare il merge
+
+Molto spesso quando si ha la certezza che un merge genererà conflitti per non compromettere uno dei due branch (sul quale dovrei fare il merge) si preferisce creare prima un nuovo branch di prova
+con l'HEAD su uno dei due branch e SOLO dopo su quest'ultimo fare il merge, se tutto va a buon fine solo allora si confluisce su uno dei branch di partenza
+
 git merge <branch-name>         // restituisce un branch unione (intersezione in caso di conflitti) con il branch-name indicato, da notare che il branch-name rimmarrà invariato
 
 git diff
