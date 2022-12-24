@@ -40,6 +40,10 @@ git branch -D <branch-name>		// forza la cancellazione di un branch che è rimas
 
 git branch -m <branch-name>     // rinomina il branch corrente con branch-name	
 
+Esitono 3 tipi di merge:
+1- Fast Forward Merge -> avviene quando eseguo commit su uno dei due branch senza toccare l'altro
+2- Merge Commit -> avviene quando i due branch sono entrambi committati ma la loro unione non determina conflitti (git esegue il commit del merge per noi)
+3- Merge Conflicts -> avviene quando i due branch sono entrambi committati e la loro unione determina conflitti (xk ad es. modificano le stesse righe), in questo caso dobbiamo amnualmente risolvere il conflitto (tramite editor) e successivamente committare il merge
 git merge <branch-name>         // restituisce un branch unione (intersezione in caso di conflitti) con il branch-name indicato, da notare che il branch-name rimmarrà invariato
 
 git diff
