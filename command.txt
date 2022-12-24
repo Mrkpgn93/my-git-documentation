@@ -41,7 +41,7 @@ git branch -D <branch-name>		// forza la cancellazione di un branch che è rimas
 
 git branch -m <branch-name>     // rinomina il branch corrente con branch-name	
 
-git merge <branch-name>
+git merge <branch-name>         // restituisce un branch unione (intersezione in caso di conflitti) con il branch-name indicato, da notare che il branch-name rimmarrà invariato
 
 git diff
 
