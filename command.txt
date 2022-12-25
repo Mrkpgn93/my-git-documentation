@@ -60,19 +60,21 @@ git diff <from-branch-name>..<to-branch-name>
 
 git diff <from-commit>..<to-commit>
 
-git stash
+git stash       // salva tutto quello che non è stato ancora committato in una apposita area di memoria
 
-git stash pop
+git stash pop   // carica il materiale stashato per ultimo nella woking directory indicata dall'attuale posizione del mio HEAD
 
 git stash apply		// è come pop con la differenza che non viene rilasciata la memoria di stash
 
-git stash list
+Se eseguo "git stash" più volte tutto il materiale viene caricato seguendo l'approccio LIFO, ad ogni aggiunta viene incrementato l'id di tutti gli altri stash più vecchi
 
-git stash apply stash@{2}
+git stash list  // mostra l'elenco di stash secondo la struttura LIFO
 
-git stash drop stash@{2}
+git stash apply stash@{<id-number>}     // sto eseguendo applay indicando un preciso stash all'interno dello stack
 
-git stash clear
+git stash drop stash@{<id-number>}      // sto cancellando un preciso stash all'interno dello stack
+
+git stash clear         // sto cancellando tutto lo stash
 
 git checkout <hash-commit>		// torno indietro nel tempo
 
