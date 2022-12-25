@@ -56,9 +56,9 @@ git diff head [filename]  // mostra a video tutti i cambiamenti del file system 
 
 git diff --staged [filename]  <--> git diff --cached [filename]      // mostra a video solo e soltanto i cambiamenti che sono stati messi nell'area di stage
 
-git diff <from-branch-name> <to-branch-name>
+git diff <from-branch-name>..<to-branch-name>
 
-git diff <from-commit> <to-commit>
+git diff <from-commit>..<to-commit>
 
 git stash
 
