@@ -50,9 +50,9 @@ con l'HEAD su uno dei due branch e SOLO dopo su quest'ultimo fare il merge, se t
 
 git merge <branch-name>         // restituisce un branch unione (intersezione in caso di conflitti) con il branch-name indicato, da notare che il branch-name rimmarrà invariato
 
-git diff        // mostra a video tutti i cambiamenti del directory di lavoro che non sono stati ancora inseriti nell'area di stage, eseguito il "git add ." non ottengo nessun risultato
+git diff        // mostra a video tutti i cambiamenti della cartella di lavoro che non sono stati ancora inseriti nell'area di stage, eseguito il "git add ." non ottengo nessun risultato
 
-git diff HEAD
+git diff head   // mostra a video tutti i cambiamenti del file system dall'ultimo commit (sia che siano nello stage oppure no)
 
 git diff --staged  <--> git diff --cached
 
