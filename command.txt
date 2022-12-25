@@ -52,7 +52,7 @@ git merge <branch-name>         // restituisce un branch unione (intersezione in
 
 git diff        // mostra a video tutti i cambiamenti della cartella di lavoro che non sono stati ancora inseriti nell'area di stage, eseguito il "git add ." non ottengo nessun risultato
 
-git diff head   // mostra a video tutti i cambiamenti del file system dall'ultimo commit (sia che siano nello stage oppure no)
+git diff head   // mostra a video tutti i cambiamenti del file system dall'ultimo commit (sia che siano nello stage oppure no), nel caso non ho modificato il progetto (quindi HEAD punta ancora all'ultimo commit) non ottengo nessun risultato
 
 git diff --staged  <--> git diff --cached
 
