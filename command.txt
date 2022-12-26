@@ -79,6 +79,8 @@ git stash clear         // sto cancellando tutto lo stash
 git checkout <hash-commit>		// torno indietro nel tempo
 
 git checkout HEAD~1				// torno indietro di 1 passo rispetto alla posizione attuale di HEAD
+git checkout HEAD~2				// torno indietro di 2 passo rispetto alla posizione attuale di HEAD
+git checkout HEAD~3				// torno indietro di 3 passo rispetto alla posizione attuale di HEAD
 
 git switch - 					// da detached HEAD torno all'ultimo commit del branch in cui mi trovo
 
