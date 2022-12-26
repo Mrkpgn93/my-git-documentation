@@ -85,11 +85,14 @@ git checkout HEAD~3				// torno indietro di 3 passo rispetto alla posizione attu
 git switch - 					// da detached HEAD torno all'ultimo commit del branch in cui mi trovo
 git switch <branch-name> 		// da detached HEAD torno all'ultimo commit del branch-name
 
+La grande differenza tra restore e checkout sta nel fatto che quest'ultimo ci mette nella modalità detached e può portare anche tutto il file system indietro nel tempo  
+
 git checkout HEAD <file-name> [<file-name>]	<-->  git restore <file-name> [<file-name>]	// tutte le modifiche del file (che non sono state inserite nello stage) verranno eliminate 
 
 git reset HEAD -- <file-name>       // tolgo tutte le modifiche caricate nello stage e le metto unstaged
 
-git restore --source HEAD~1 <file-name> [<file-name>]
+git restore --source HEAD~1 <file-name> [<file-name>]           // porto il file-name 1 passo indietro dalla posizione attuale dell'HEAD SENZA TROVARMI IN DETACHED MODE!!!
+git restore --source <hash-commit> <file-name> [<file-name>]    // porto il file-name alla posizione indicata dall'hash-commit SENZA TROVARMI IN DETACHED MODE!!!
 
 git restore --staged <file-name> [<file-name>]		// funziona nel momento in cui voglio togliere un file dalla condizione di staged (git add)
 
