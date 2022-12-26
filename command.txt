@@ -85,16 +85,16 @@ git checkout HEAD~2				// l'intero progetto torna indietro di 2 passo rispetto a
 git checkout HEAD~3				// l'intero progetto torna indietro di 3 passo rispetto alla posizione attuale di HEAD
 
 git switch - 					// da detach mode l'HEAD torna all'ultimo commit del branch in cui mi trovo
+
 git switch <branch-name> 		// da detach mode l'HEAD torna all'ultimo commit del branch-name
 
-git restore <file-name> [<file-name>] <--> git checkout HEAD <file-name> [<file-name>]  // tutte le modifiche del file (che non sono state inserite nello stage) verranno eliminate 
+git restore <file-name> [<file-name>] <--> git checkout HEAD <file-name> [<file-name>]  // tutte le modifiche unstaged del file-name verranno eliminate 
 
-git reset HEAD -- <file-name>       // tolgo tutte le modifiche caricate nello stage e le metto unstaged
+git restore --staged <file-name> [<file-name>]	<--> git reset HEAD -- <file-name> 	    // tutte le modifiche del file-name da staged diventano unstaged
 
-git restore --source HEAD~1 <file-name> [<file-name>] <--> git checkout HEAD~1 <file-name> [<file-name>]        // porto il file-name 1 passo indietro dalla posizione attuale dell'HEAD SENZA TROVARMI IN DETACHED MODE!!!
+git restore --source HEAD~1 <file-name> [<file-name>] <--> git checkout HEAD~1 <file-name> [<file-name>]                 // porto il file-name 1 passo indietro rispetto la posizione attuale dell'HEAD SENZA TROVARMI IN DETACHED MODE!!!
+
 git restore --source <hash-commit> <file-name> [<file-name>] <--> git checkout <hash-commit> <file-name> [<file-name>]   // porto il file-name alla posizione indicata dall'hash-commit SENZA TROVARMI IN DETACHED MODE!!!
-
-git restore --staged <file-name> [<file-name>]		// funziona nel momento in cui voglio togliere un file dalla condizione di staged (git add)
 
 cat .git/HEAD		// mi restituisce il commit dove punta l'HEAD
 
