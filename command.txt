@@ -100,9 +100,9 @@ cat .git/HEAD		// mi restituisce il commit dove punta l'HEAD
 
 git reset <file-name>        // metto il file-name nella situazione di staged
 
-git reset <hash-commit>			// torno al commit indicato e tutto quello che era stato committato prima me lo trovo in fase di unstaged
+git reset <hash-commit>			// torno al commit indicato e tutto quello che era stato committato dopo l'hash-commit indicato me lo trovo in fase di unstaged
 
-git reset --hard <hash-commit>
+git reset --hard <hash-commit>  // torno al commit indicato e tutto quello che era stato committato dopo l'hash-commit indicato VIENE CANCELLATO!!
 
 git revert <hash-commit> 		// agginge un commit che fa l'undo dei precedenti
 
