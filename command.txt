@@ -90,7 +90,7 @@ git switch <branch-name> 		// da detach mode l'HEAD torna all'ultimo commit del 
 
 git restore <file-name> [<file-name>] <--> git checkout HEAD <file-name> [<file-name>]  // tutte le modifiche unstaged del file-name verranno eliminate 
 
-git restore --staged <file-name> [<file-name>]	<--> git reset HEAD -- <file-name> 	    // tutte le modifiche del file-name da staged diventano unstaged
+git restore --staged <file-name> [<file-name>]	<--> git reset HEAD -- <file-name>  <--> git reset <file-name>   // tutte le modifiche del file-name da staged diventano unstaged
 
 git restore --source HEAD~1 <file-name> [<file-name>] <--> git checkout HEAD~1 <file-name> [<file-name>]                 // porto il file-name 1 passo indietro rispetto la posizione attuale dell'HEAD SENZA TROVARMI IN DETACHED MODE!!!
 
@@ -98,13 +98,13 @@ git restore --source <hash-commit> <file-name> [<file-name>] <--> git checkout <
 
 cat .git/HEAD		// mi restituisce il commit dove punta l'HEAD
 
-git reset <file-name>        // metto il file-name nella situazione di staged
+reset è un comando che cancella i commit NON i branch!!
 
 git reset <hash-commit>			// torno al commit indicato e tutto quello che era stato committato dopo l'hash-commit indicato me lo trovo in fase di unstaged
 
 git reset --hard <hash-commit>  // torno al commit indicato e tutto quello che era stato committato dopo l'hash-commit indicato VIENE CANCELLATO!!
 
-git revert <hash-commit> 		// agginge un commit che fa l'undo dei precedenti
+git revert <hash-commit> 		// agginge un commit che fa l'undo dei precedenti, è il modo più intelligente per fare una specie di reset ma senza la cancellazione dei commit
 
 git clone <url>
 
