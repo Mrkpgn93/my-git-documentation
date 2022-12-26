@@ -14,7 +14,7 @@ git log --oneline
 
 git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 
-git commit --amend          // Posso tornare indietro soltanto di un passo! viene comodo quando devo modificare il messaggio del commit oppure aggiungere qualcosa che mi ero dimenticato all'interno dello stage
+git commit --amend          // Posso tornare indietro soltanto di un passo! viene comodo quando devo modificare il messaggio del commit oppure aggiungere qualcosa che mi ero dimenticato all'interno dello stage (in quest'ultimo caso devo precedere il comando di amend da quello di add)
 
 git branch                      // vedo l'elenco dei branch anteponendo il simbolo * su quello in cui mi trovo
 
