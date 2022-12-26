@@ -85,11 +85,11 @@ git checkout HEAD~3				// torno indietro di 3 passo rispetto alla posizione attu
 git switch - 					// da detached HEAD torno all'ultimo commit del branch in cui mi trovo
 git switch <branch-name> 		// da detached HEAD torno all'ultimo commit del branch-name
 
-git checkout HEAD <file> [<file>]	<-->  git restore <file> [<file>]	// tutte le modifiche del file verranno eliminate 
+git checkout HEAD <file-name> [<file-name>]	<-->  git restore <file-name> [<file-name>]	// tutte le modifiche del file (che non sono state inserite nello stage) verranno eliminate 
 
-git restore --source HEAD~1 <file> [<file>]
+git restore --source HEAD~1 <file-name> [<file-name>]
 
-git restore --staged <file> [<file>]		// funziona nel momento in cui voglio togliere un file dalla condizione di staged (git add)
+git restore --staged <file-name> [<file-name>]		// funziona nel momento in cui voglio togliere un file dalla condizione di staged (git add)
 
 cat .git/HEAD		// mi restituisce il commit dove punta l'HEAD
 
