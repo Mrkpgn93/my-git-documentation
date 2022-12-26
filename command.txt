@@ -88,7 +88,7 @@ git restore --source HEAD~1 <file> [<file>]
 
 git restore --staged <file> [<file>]		// funziona nel momento in cui voglio togliere un file dalla condizione di staged (git add)
 
-cat .git/HEAD		// mi restituisce il commit dove punto
+cat .git/HEAD		// mi restituisce il commit dove punta l'HEAD
 
 git reset <file-name>        // metto il file-name nella situazione di staged
 
