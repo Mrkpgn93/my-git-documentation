@@ -87,6 +87,8 @@ git switch <branch-name> 		// da detached HEAD torno all'ultimo commit del branc
 
 git checkout HEAD <file-name> [<file-name>]	<-->  git restore <file-name> [<file-name>]	// tutte le modifiche del file (che non sono state inserite nello stage) verranno eliminate 
 
+git reset HEAD -- <file-name>       // tolgo tutte le modifiche caricate nello stage e le metto unstaged
+
 git restore --source HEAD~1 <file-name> [<file-name>]
 
 git restore --staged <file-name> [<file-name>]		// funziona nel momento in cui voglio togliere un file dalla condizione di staged (git add)
