@@ -116,7 +116,7 @@ git remote rename <old> <new>
 
 git remote remove <name>
 
-git push <remote> <branch>		// crea su github un branch con lo stesso nome che gli abbiamo dato in locale, le volte successive aggiornerà lo stato del repository su github
+git push <remote> <branch>		// crea su github un branch con lo stesso nome che gli abbiamo dato in locale, le volte successive lo stesso comando aggiornerà lo stato del repository su github
 
 git push -u <remote> <branch>	// dopo la prima volta che lo eseguiamo possiamo semplificare il comando da eseguire scrivendo soltanto "git push"
 
