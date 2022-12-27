@@ -116,6 +116,8 @@ git remote rename <old> <new>
 
 git remote remove <name>
 
+Su github NON si pusha un commit MA SOLO E SOLTANTO UN INTERO BRANCH
+
 git push <remote> <branch>		// crea su github un branch con lo stesso nome che gli abbiamo dato in locale, le volte successive lo stesso comando aggiornerà lo stato del repository su github
 
 git push -u <remote> <branch>	// dopo la prima volta che lo eseguiamo possiamo semplificare il comando da eseguire scrivendo soltanto "git push"
