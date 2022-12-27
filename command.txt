@@ -106,7 +106,7 @@ git reset --hard <hash-commit>  // torno al commit indicato e tutto quello che e
 
 git revert <hash-commit> 		// agginge un commit che fa l'undo dei precedenti, è il modo più intelligente per fare una specie di reset ma senza la cancellazione dei commit
 
-git clone <url>
+git clone <url>         // permette di caricare in locale un repo remoto indicato dal suo url (è importante assicuransi di NON essere già dentro un'altro repo quando si esegue questo comando)
 
 git remote -v
 
