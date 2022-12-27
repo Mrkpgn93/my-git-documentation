@@ -110,7 +110,7 @@ git clone <url>         // permette di caricare in locale un repo remoto indicat
 
 git remote -v           // verifica l'esistenza di una connessione con un repo remoto (caricato su github)
 
-git remote add <name> <url>		// aggancio un repository locale con uno creato ex-novo su GitHub
+git remote add <name> <url>		// aggancio un repository locale con uno creato ex-novo su GitHub, di solito name = origin (NON HO ANCORA PUSHATO IL REPO...)
 
 git remote rename <old> <new>
 
