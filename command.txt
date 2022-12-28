@@ -120,7 +120,7 @@ Su github NON si pusha un commit MA SOLO E SOLTANTO UN INTERO BRANCH
 
 git push <remote-name> <branch-name>		// attraverso li remote-name creo su github un branch con lo stesso nome branch-name che gli abbiamo dato in locale, le volte successive lo stesso comando aggiornerà lo stato del repository su github
 
-git push -u <remote-name> <branch-name>	// dopo la prima volta che lo eseguiamo possiamo semplificare il comando da eseguire scrivendo soltanto "git push"
+git push -u <remote-name> <branch-name>	    // dopo la prima volta che lo eseguiamo possiamo semplificare i comandi successivi scrivendo soltanto "git push"
 
 git push <remote-name> <local-branch-name>:<remote-branch-name>		// carica su github tutte le modifiche che sono state fatte nel local-branch-name MA su un remote-branch-name che ha un nome diverso da quello locale...
 
