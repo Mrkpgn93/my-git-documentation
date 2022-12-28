@@ -134,7 +134,7 @@ git push -u <remote-name> <branch-name>	    // dopo la prima volta che lo esegui
 
 git push <remote-name> <local-branch-name>:<remote-branch-name>		// carica su github tutte le modifiche che sono state fatte nel local-branch-name MA su un remote-branch-name che ha un nome diverso da quello locale...
 
-git push -d <remote-name> <remote-branch-name>    // elimina SIA in locale SIA su github il remote-branch-name indicato (molto pericoloso)
+git push -d <remote-name> <remote-branch-name>    // elimina SIA il RIFERIMENTO in locale (NON IL BRANCH) SIA il REPOSITORY su github per il remote-branch-name indicato (molto pericoloso)
 
 git checkout <remote-name>/<branch-name>		// torno all'ultimo commit del branch-name clonato da gitHub, ovviamente sono in detached mode
 
