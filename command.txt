@@ -122,7 +122,7 @@ git push <remote-name> <branch-name>		// attraverso li remote-name creo su githu
 
 git push -u <remote-name> <branch-name>	// dopo la prima volta che lo eseguiamo possiamo semplificare il comando da eseguire scrivendo soltanto "git push"
 
-git push <remote> <local-branch>:<remote-branch>		// carica su github tutte le modifiche che sono state fatte nel branch locale su un remote branch che ha un nome diverso da quello locale...
+git push <remote-name> <local-branch-name>:<remote-branch-name>		// carica su github tutte le modifiche che sono state fatte nel local-branch-name MA su un remote-branch-name che ha un nome diverso da quello locale...
 
 git branch -r
 
