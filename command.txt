@@ -18,7 +18,23 @@ git commit --amend          // Posso tornare indietro soltanto di un passo! vien
 
 git branch                      // vedo l'elenco dei branch anteponendo il simbolo * su quello in cui mi trovo
 
+git branch -r                   // fornisce SOLTANTO l'elenco dei riferimenti remoti
+
+git branch -a                   // vedo l'elenco dei branch SIA locali SIA remoti (github) anteponendo il simbolo * su quello in cui mi trovo
+
 git branch <branch-name>        // crea un nuovo branch con il branch-name indicato a partire dall'HEAD corrente
+
+git branch <branch-name> <remote-name>/<branch-name>        // crea un nuovo branch in locale e lo aggancia al <remote-name>/<branch-name> di github
+
+git branch -rd <remote-name>/<branch-name>                  // cancella SOLO IL RIFERIMENTO LOCALE al <remote-name>/<branch-name> indicato E NON IL BRANCH LOCALE ASSOCIATO, se vuoi eliminarlo anche su github eseguire "git push -d <remote-name> <remote-branch-name>"
+
+Quando voglio cancellare un branch devo sempre farlo stando su un'altro branch!!!
+
+git branch -d <branch-name>		// cancella un branch (da utilizzare subito dopo un git merge <branch-name>)
+
+git branch -D <branch-name>		// forza la cancellazione di un branch che è rimasto "appeso" xk non è stato mergiato (pericoloso...)
+
+git branch -m <branch-name>     // rinomina il branch corrente con branch-name	
 
 Quando decido di fare switch da un branch all'altro devo sempre vedere se ho lasciato qualcosa all'interno dello stage, mi potrei trovare in 2 casi:
 1- tutto quello che ho nello stage non va in conflitto con il branch sul quale voglio switchare, se non committo prima di switchare allora mi trascino con me tutto lo stage
@@ -31,14 +47,6 @@ git switch <branch-name>        // sposto il puntatore HEAD in corrispondenza de
 git commit -a -m <message>		// "git add ." + "git commit" 
 
 git switch -c <branch-name>		// "git branch <branch-name>" + "git switch <branch-name>"
-
-Quando voglio cancellare un branch devo sempre farlo stando su un'altro branch!!!
-
-git branch -d <branch-name>		// cancella un branch (da utilizzare subito dopo un git merge <branch-name>)
-
-git branch -D <branch-name>		// forza la cancellazione di un branch che è rimasto "appeso" xk non è stato mergiato (pericoloso...)
-
-git branch -m <branch-name>     // rinomina il branch corrente con branch-name	
 
 Esitono 3 tipi di merge:
 1- Fast Forward Merge -> avviene quando eseguo commit su uno dei due branch senza toccare l'altro
@@ -114,7 +122,9 @@ git remote add <name> <url>		// aggancio un repository locale con uno creato ex-
 
 git remote rename <old-name> <new-name>     // serve quando voglio cambiare il nome del remote, generalmente da origin (old-name) a qualcos'altro (new-name)
 
-git remote remove <name>
+git remote remove <name>      // elimina il collegamento tra il workspace locale e quello remoto precedentemente creato tramite "git remote add <name> <url>"
+
+git ls-remote .             // fornisce l'elenco dei RIFERIMENTI SIA locali SIA remoti, per vedere questi ultimi è ncessario aver pushato almeno una volta
 
 Su github NON si pusha un commit MA SOLO E SOLTANTO UN INTERO BRANCH
 
@@ -124,16 +134,14 @@ git push -u <remote-name> <branch-name>	    // dopo la prima volta che lo esegui
 
 git push <remote-name> <local-branch-name>:<remote-branch-name>		// carica su github tutte le modifiche che sono state fatte nel local-branch-name MA su un remote-branch-name che ha un nome diverso da quello locale...
 
-git ls-remote .             // fornisce l'elenco dei riferimenti SIA locali SIA remoti, per vedere questi ultimi è ncessario aver pushato almeno una volta
-
-git branch -r               // fornisce SOLTANTO l'elenco dei riferimenti remoti
+git push -d <remote-name> <remote-branch-name>    // elimina SIA in locale SIA su github il remote-branch-name indicato (molto pericoloso)
 
 git checkout <remote-name>/<branch-name>		// torno all'ultimo commit del branch-name clonato da gitHub, ovviamente sono in detached mode
 
-git switch <nomeBranch>				// mi permette di clonare sul mio host il branch remoto di gitHub (che ha lo stesso nome)
+git fetch <--> git fetch <remote-name>    // carica all'interno del workspace locale i RIFERIMENTI a tutti i branch del remote-name, se ho già alcuni branch in locale allora farà il binding automatico
 
-git fetch <remote>				// il comando fetch mi permette di aggiornare l'origin SENZA andare a modificare il mio workspace
+git fetch <remote-name> <branch-name>	// carica all'interno del workspace locale i RIFERIMENTI remoti del solo branch-name indicato, nel caso ho già il branch in locale allora farà il binding automatico
 
-git fetch <remote> <branch>		// seleziono soltanto un branch di mio interesse
+git pull <remote> <branch-name>		        // posso anche scrivere soltanto "git pull", "git pull" = "git fetch" + "git merge"
 
-git pull <remote> <branch>		// posso anche scrivere soltanto "git pull", "git pull" = "git fetch" + "git merge"
+git switch <branch-name>				// crea nel mio workspace un nuovo branch locale e lo aggancia al <nome-branch> scaricato da github, ovviamente devo aver prima eseguito "git remote add <name> <url>"
