@@ -116,8 +116,6 @@ git remote rename <old-name> <new-name>     // serve quando voglio cambiare il n
 
 git remote remove <name>
 
-git ls-remote .             // fornisce l'elenco dei riferimenti SIA locali SIA remoti, per vedere questi ultimi è ncessario aver pushato almeno una volta
-
 Su github NON si pusha un commit MA SOLO E SOLTANTO UN INTERO BRANCH
 
 git push <remote-name> <branch-name>		// attraverso li remote-name creo su github un branch con lo stesso nome branch-name che gli abbiamo dato in locale, le volte successive lo stesso comando aggiornerà lo stato del repository su github
@@ -126,11 +124,11 @@ git push -u <remote-name> <branch-name>	    // dopo la prima volta che lo esegui
 
 git push <remote-name> <local-branch-name>:<remote-branch-name>		// carica su github tutte le modifiche che sono state fatte nel local-branch-name MA su un remote-branch-name che ha un nome diverso da quello locale...
 
-git branch -r
+git ls-remote .             // fornisce l'elenco dei riferimenti SIA locali SIA remoti, per vedere questi ultimi è ncessario aver pushato almeno una volta
 
-git checkout <remote>/<branch>		// torno all'ultimo commit che riguarda il progetto clonato da gitHub 
+git branch -r               // fornisce SOLTANTO l'elenco dei riferimenti remoti
 
-git push origin main			// carico gli ultimi commit locali su gitHub
+git checkout <remote-name>/<branch-name>		// torno all'ultimo commit del branch-name clonato da gitHub, ovviamente sono in detached mode
 
 git switch <nomeBranch>				// mi permette di clonare sul mio host il branch remoto di gitHub (che ha lo stesso nome)
 
