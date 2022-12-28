@@ -112,7 +112,7 @@ git remote -v           // verifica l'esistenza di una connessione con un repo r
 
 git remote add <name> <url>		// aggancio un repository locale con uno creato ex-novo su GitHub, di solito name = origin (NON HO ANCORA PUSHATO IL REPO...)
 
-git remote rename <old> <new>
+git remote rename <old-name> <new-name>     // serve quando voglio cambiare il nome del remote, generalmente da origin (old-name) a qualcos'altro (new-name)
 
 git remote remove <name>
 
