@@ -126,7 +126,9 @@ git remote remove <name>      // elimina il collegamento tra il workspace locale
 
 git ls-remote .             // fornisce l'elenco dei RIFERIMENTI SIA locali SIA remoti, per vedere questi ultimi è ncessario aver pushato almeno una volta
 
-Su github NON si pusha un commit MA SOLO E SOLTANTO UN INTERO BRANCH
+Su github NON si pusha un commit MA SOLO E SOLTANTO UN INTERO BRANCH. 
+
+Prima di pushare qualcosa su github conviene sempre fare prima un fetch/pull per capire se intanto lo stato del branch su github è cambiato!!!
 
 git push <remote-name> <branch-name>		// attraverso li remote-name creo su github un branch con lo stesso nome branch-name che gli abbiamo dato in locale, le volte successive lo stesso comando aggiornerà lo stato del repository su github
 
