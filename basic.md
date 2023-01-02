@@ -6,6 +6,7 @@
 1. [Fix the state of a repo :ring:](#fix-the-state-of-a-repo)
 1. [Logs :notebook_with_decorative_cover: :anchor:](#logs)
 1. [How to modify last commit :wrench:](#logs)
+1. [Add and commit at once :clipboard::ring:](#add-and-commit-at-once)
 
 ## Working tree status
 
@@ -37,7 +38,7 @@
 
 ## Fix the repo's state
 
-`git commit -m "my message"` [:link:](https://git-scm.com/docs/git-commit)
+`git commit -m "msg"` [:link:](https://git-scm.com/docs/git-commit)
 
 > Create a new commit containing the current contents of the index and the given log message describing the changes.
 
@@ -61,3 +62,11 @@
 `git commit --amend` [:link:](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---amend)
 
 > I can only go back one step! it comes in handy when I have to change the commit message or add something I forgot inside the stage (in the latter case I have to precede the amend command from the add one)
+
+---
+
+## Add and commit at once
+
+`git commit -a -m "msg"`
+
+> It's the equivalent of _"git add ." + "git commit"_
