@@ -1,4 +1,4 @@
-# Basics :abc:
+# Basics
 
 1. [Working tree status :herb:](#working-tree-status)
 1. [Is there any repo? :open_file_folder:](#is-there-any-repo)
@@ -12,7 +12,7 @@
 
 `git status` [:link:](https://git-scm.com/docs/git-status)
 
-> Displays paths that have differences between the index file and the current HEAD commit, paths that have differences between the working tree and the index file, and paths in the working tree that are not tracked by Git
+> Displays paths that have differences between the index file and the current HEAD commit, paths that have differences between the working tree and the index file, and paths in the working tree that are not tracked by Git [:arrow_heading_up:](#basics)
 
 ---
 
@@ -20,7 +20,7 @@
 
 `git init` [:link:](https://git-scm.com/docs/git-init)
 
-> Create an empty Git repository or reinitialize an existing one
+> Create an empty Git repository or reinitialize an existing one [:arrow_heading_up:](#basics)
 
 ---
 
@@ -32,7 +32,7 @@
 
 `git add --all` [:link:](https://git-scm.com/docs/git-add#Documentation/git-add.txt---all)
 
-> This command updates the index using the current content found in the working tree, to prepare the content staged for the next commit. It typically adds the current content of existing paths as a whole, but with some options it can also be used to add content with only part of the changes made to the working tree files applied, or remove paths that do not exist in the working tree anymore.
+> This command updates the index using the current content found in the working tree, to prepare the content staged for the next commit. It typically adds the current content of existing paths as a whole, but with some options it can also be used to add content with only part of the changes made to the working tree files applied, or remove paths that do not exist in the working tree anymore. [:arrow_heading_up:](#basics)
 
 ---
 
@@ -40,7 +40,7 @@
 
 `git commit -m "msg"` [:link:](https://git-scm.com/docs/git-commit)
 
-> Create a new commit containing the current contents of the index and the given log message describing the changes.
+> Create a new commit containing the current contents of the index and the given log message describing the changes. [:arrow_heading_up:](#basics)
 
 ---
 
@@ -53,7 +53,7 @@
 `git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 ` [:link:](https://git-scm.com/docs/git-log#Documentation/git-log.txt---graph)
 
-> List commits that are reachable by following the parent links from the given commit(s), but exclude commits that are reachable from the one(s) given with a ^ in front of them. The output is given in reverse chronological order by default.
+> List commits that are reachable by following the parent links from the given commit(s), but exclude commits that are reachable from the one(s) given with a ^ in front of them. The output is given in reverse chronological order by default. [:arrow_heading_up:](#basics)
 
 ---
 
@@ -61,7 +61,7 @@
 
 `git commit --amend` [:link:](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---amend)
 
-> I can only go back one step! it comes in handy when I have to change the commit message or add something I forgot inside the stage (in the latter case I have to precede the amend command from the add one)
+> I can only go back one step! it comes in handy when I have to change the commit message or add something I forgot inside the stage (in the latter case I have to precede the amend command from the add one) [:arrow_heading_up:](#basics)
 
 ---
 
@@ -69,4 +69,4 @@
 
 `git commit -a -m "msg"`
 
-> It's the equivalent of _"git add ." + "git commit"_
+> It's the equivalent of _"git add ." + "git commit"_ [:arrow_heading_up:](#basics)
