@@ -1,4 +1,4 @@
-# Basics
+# Basics :abc:
 
 1. [Working tree status :herb:](#working-tree-status)
 1. [Is there any repo? :open_file_folder:](#is-there-any-repo)
@@ -35,7 +35,7 @@
 
 ---
 
-## Fix the state of a repo
+## Fix the repo's state
 
 `git commit -m "my message"` [:link:](https://git-scm.com/docs/git-commit)
 
